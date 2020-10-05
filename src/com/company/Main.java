@@ -2,10 +2,12 @@ package com.company;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 public class Main {
 
     private static Map<Integer, Location> locations = new HashMap<Integer, Location>();
+
     public static void main(String[] args) {
 	// Create rooms
         locations.put(0,new Location(0,"Central room"));
@@ -31,9 +33,26 @@ public class Main {
 
         locations.get(0).addExit("N",1);
 
+        //Code of walking
 
-     ;
+        Scanner scanner = new Scanner(System.in);
 
+        int roomNumber = 0;
+        String direction;
+        while(true){
+            //print current location
+            System.out.println("Your are in: "+locations.get(roomNumber).getDescription());
+            System.out.println("Your exits: ");
+            for(String key : locations.get(roomNumber).getExits().keySet()){
+                System.out.print(locations.get(roomNumber).getExits().get(key));
+            }
+
+            direction = scanner.nextLine().toUpperCase();
+            if(direction == "Q"){
+                break;
+            }
+            System.out.println("Your choose direction: "+direction);
+        }
 
     }
 }
