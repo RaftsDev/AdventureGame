@@ -51,10 +51,17 @@ public class Main {
             //direction = "Q";
             System.out.println("direction: "+direction);
             if(direction.equals("Q")){
-                System.out.println("Inside condition");
+                System.out.println("Qiuting...");
                 break;
             }
             System.out.println("Your choose direction: "+direction);
+
+            if(locations.get(roomNumber).getExits().containsKey(direction)){
+                System.out.println("You going to: "+direction);
+            }else{
+                System.out.println("No exit in this direction");
+            }
+
         }
 
     }
