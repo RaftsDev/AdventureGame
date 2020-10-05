@@ -38,7 +38,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         int roomNumber = 0;
-        char direction;
+        String direction;
         while(true){
             //print current location
             System.out.println("Your are in: "+locations.get(roomNumber).getDescription());
@@ -47,10 +47,10 @@ public class Main {
                 System.out.print(locations.get(roomNumber).getExits().get(key));
             }
 
-            direction = scanner.next(".").charAt(0);
+            direction = scanner.nextLine().toUpperCase();
             //direction = "Q";
             System.out.println("direction: "+direction);
-            if(direction == 'q'){
+            if(direction.equals("Q")){
                 System.out.println("Inside condition");
                 break;
             }
