@@ -14,7 +14,25 @@ public class Main {
         locations.put(3,new Location(3,"Western room"));
         locations.put(4,new Location(4,"Southern room"));
 
+        //Add exits to each room
 
+        locations.get(0).addExit("N",1);
+        locations.get(0).addExit("E",2);
+        locations.get(0).addExit("W",3);
+        locations.get(0).addExit("S",4);
+
+        locations.get(1).addExit("E",2);
+        locations.get(1).addExit("S",0);
+
+        locations.get(2).addExit("W",0);
+        locations.get(2).addExit("N",1);
+
+        locations.get(3).addExit("E",0);
+
+        locations.get(0).addExit("N",1);
+
+
+     ;
 
 
     }
