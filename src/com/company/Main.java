@@ -58,6 +58,7 @@ public class Main {
 
             if(locations.get(roomNumber).getExits().containsKey(direction)){
                 System.out.println("You going to: "+direction);
+                roomNumber = locations.get(roomNumber).getExits();
             }else{
                 System.out.println("No exit in this direction");
             }
