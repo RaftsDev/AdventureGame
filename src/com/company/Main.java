@@ -46,7 +46,7 @@ public class Main {
             System.out.println("Your exits: ");
             for(String key : locations.get(currentRoom).getExits().keySet()){
                 roomNumber = locations.get(currentRoom).getExits().get(key);
-                System.out.print(locations.get(roomNumber).getDescription());
+                System.out.print(locations.get(roomNumber).getDescription()+" ");
             }
 
             direction = scanner.nextLine().toUpperCase();
