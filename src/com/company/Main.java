@@ -44,6 +44,7 @@ public class Main {
             //print current location
             System.out.println("Your are in: "+locations.get(currentRoom).getDescription());
             System.out.println("Your exits: ");
+            System.out.print("| ");
             for(String key : locations.get(currentRoom).getExits().keySet()){
                 roomNumber = locations.get(currentRoom).getExits().get(key);
                 System.out.print(locations.get(roomNumber).getDescription()+" | ");
