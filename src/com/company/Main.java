@@ -43,11 +43,14 @@ public class Main {
         while(true){
             //print current location
             System.out.println("Your are in: "+locations.get(currentRoom).getDescription());
-            System.out.println("Your exits: ");
+            System.out.println("Your directions of exits: ");
             System.out.print("| ");
             for(String key : locations.get(currentRoom).getExits().keySet()){
                 roomNumber = locations.get(currentRoom).getExits().get(key);
-                System.out.print(locations.get(roomNumber).getDescription()+" | ");
+
+                //System.out.print("roomNumber: "+ roomNumber+" ");
+                //System.out.print(locations.get(roomNumber).getDescription()+" | ");
+                System.out.print(key+" - "+locations.get(roomNumber).getDescription()+" | ");
             }
             System.out.println();
             direction = scanner.nextLine().toUpperCase();
@@ -63,7 +66,7 @@ public class Main {
                 System.out.println("You going to: "+direction);
                 // moving action
                 currentRoom = locations.get(currentRoom).getExits().get(direction);
-                System.out.println("You are in "+locations.get(currentRoom).getDescription());
+                //System.out.println("You are in "+locations.get(currentRoom).getDescription());
             }else{
                 System.out.println("No exit in this direction");
             }
