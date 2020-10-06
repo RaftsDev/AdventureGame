@@ -37,14 +37,14 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
-        int roomNumber = 0;
+        int currentRoom = 0;
         String direction;
         while(true){
             //print current location
-            System.out.println("Your are in: "+locations.get(roomNumber).getDescription());
+            System.out.println("Your are in: "+locations.get(currentRoom).getDescription());
             System.out.println("Your exits: ");
-            for(String key : locations.get(roomNumber).getExits().keySet()){
-                System.out.print(locations.get(roomNumber).getExits().get(key));
+            for(String key : locations.get(currentRoom).getExits().keySet()){
+                System.out.print(locations.get(key).getDescription());
             }
 
             direction = scanner.nextLine().toUpperCase();
@@ -56,11 +56,11 @@ public class Main {
             }
             System.out.println("Your choose direction: "+direction);
 
-            if(locations.get(roomNumber).getExits().containsKey(direction)){
+            if(locations.get(currentRoom).getExits().containsKey(direction)){
                 System.out.println("You going to: "+direction);
                 // moving action
-                roomNumber = locations.get(roomNumber).getExits().get(direction);
-                System.out.println("You are in "+locations.get(roomNumber).getDescription());
+                currentRoom = locations.get(currentRoom).getExits().get(direction);
+                System.out.println("You are in "+locations.get(currentRoom).getDescription());
             }else{
                 System.out.println("No exit in this direction");
             }
