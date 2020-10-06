@@ -38,13 +38,15 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         int currentRoom = 0;
+        int roomNumber;
         String direction;
         while(true){
             //print current location
             System.out.println("Your are in: "+locations.get(currentRoom).getDescription());
             System.out.println("Your exits: ");
             for(String key : locations.get(currentRoom).getExits().keySet()){
-                System.out.print(locations.get(key).getDescription());
+                roomNumber = locations.get(currentRoom).getExits().get(key);
+                System.out.print(locations.get(roomNumber).getDescription());
             }
 
             direction = scanner.nextLine().toUpperCase();
