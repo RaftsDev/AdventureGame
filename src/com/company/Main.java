@@ -49,7 +49,7 @@ public class Main {
                 roomNumber = locations.get(currentRoom).getExits().get(key);
                 System.out.print(locations.get(roomNumber).getDescription()+" | ");
             }
-
+            System.out.println();
             direction = scanner.nextLine().toUpperCase();
             //direction = "Q";
             System.out.println("direction: "+direction);
