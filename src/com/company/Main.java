@@ -62,7 +62,7 @@ public class Main {
             //direction = "Q";
             System.out.println("direction: "+direction);
             if(direction.equals("Q")){
-                System.out.println("Qiuting...");
+                System.out.println("Quiting...");
                 break;
             }
             System.out.println("Your choose direction: "+direction);
