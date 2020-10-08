@@ -20,20 +20,20 @@ public class Main {
 
         //central room
         locations.get(0).addExit("N",1);
-        locations.get(0).addExit("E",2);
-        locations.get(0).addExit("W",3);
+        locations.get(0).addExit("W",2);
+        locations.get(0).addExit("E",3);
         locations.get(0).addExit("S",4);
 
         //Northern room
         locations.get(1).addExit("E",2);
         locations.get(1).addExit("S",0);
 
-        //Eastern room
-        locations.get(2).addExit("W",0);
+        //Western room
+        locations.get(2).addExit("E",0);
         locations.get(2).addExit("N",1);
 
-        //Western room
-        locations.get(3).addExit("E",0);
+        //Eastern room
+        locations.get(3).addExit("W",0);
 
         //Southern room
         locations.get(4).addExit("N",0);
