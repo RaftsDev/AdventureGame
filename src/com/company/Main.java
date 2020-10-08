@@ -52,26 +52,22 @@ public class Main {
             System.out.print("| ");
             for(String key : locations.get(currentRoom).getExits().keySet()){
                 roomNumber = locations.get(currentRoom).getExits().get(key);
-
-                //System.out.print("roomNumber: "+ roomNumber+" ");
-                //System.out.print(locations.get(roomNumber).getDescription()+" | ");
                 System.out.print(key+" - "+locations.get(roomNumber).getDescription()+" | ");
             }
             System.out.println();
             direction = scanner.nextLine().toUpperCase();
-            //direction = "Q";
-            System.out.println("direction: "+direction);
+
             if(direction.equals("Q")){
                 System.out.println("Quiting...");
                 break;
+            }else{
+                System.out.println("Your choose direction: "+direction);
             }
-            System.out.println("Your choose direction: "+direction);
 
             if(locations.get(currentRoom).getExits().containsKey(direction)){
                 System.out.println("You going to: "+direction);
                 // moving action
                 currentRoom = locations.get(currentRoom).getExits().get(direction);
-                //System.out.println("You are in "+locations.get(currentRoom).getDescription());
             }else{
                 System.out.println("No exit in this direction");
             }
