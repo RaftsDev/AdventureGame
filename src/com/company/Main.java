@@ -25,7 +25,7 @@ public class Main {
         locations.get(0).addExit("S",4);
 
         //Northern room
-        locations.get(1).addExit("E",2);
+        locations.get(1).addExit("W",2);
         locations.get(1).addExit("S",0);
 
         //Western room
